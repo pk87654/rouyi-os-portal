@@ -48,6 +48,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Static HTML Generation
+        env:
+          NUXT_APP_BASE_URL: /rouyi-os-portal/
         run: pnpm generate
 
       - name: Upload artifact
