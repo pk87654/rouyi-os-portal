@@ -13,14 +13,24 @@ onMounted(() => {
     <div class="hero-orb" /><div class="grid-overlay" />
     <div class="section-shell hero-layout">
       <div class="hero-copy">
-        <div data-hero class="hero-badge"><span class="status-dot" /> RUIYI MANUFACTURING PLATFORM · V1</div>
+        <div data-hero class="hero-badge"><span class="status-dot" /> OPEN SOURCE MDP · 面向开发者与工厂 IT</div>
         <h1 data-hero>让软件理解<br><em>工厂怎么工作。</em></h1>
-        <p data-hero>从客户需求到生产交付，把真实工厂完整运行在一个系统里。连接 ERP、MES、WMS、PLM 与 QMS，让计划、现场与交付共享同一个事实源。</p>
+        <p data-hero>
+          专为离散制造与机加工打造的开源数字化制造平台。基于 Spring Boot 4 + PG16 + Vue 3，连接 PLM、MES、APS、QMS、WMS 与 Tool 刀具，让工艺、排产与现场执行共享同一个事实源。
+        </p>
         <div data-hero class="hero-actions">
-          <a class="primary-button" href="#contact">在线体验 <span>→</span></a>
-          <a class="secondary-button" href="#architecture">▤ 查看文档</a>
+          <NuxtLink class="primary-button" to="/quick-start">
+            <span>快速上手 15分钟启动</span> <span>→</span>
+          </NuxtLink>
+          <NuxtLink class="secondary-button" to="/architecture">
+            <span>▤ V5.0 架构总纲</span>
+          </NuxtLink>
         </div>
-        <div data-hero class="hero-links"><a href="#open-source">⌘ 开源仓库</a><a href="#architecture">◇ 部署指南</a></div>
+        <div data-hero class="hero-links">
+          <NuxtLink to="/hosting">⌘ 源码仓库 (Gitee / GitHub)</NuxtLink>
+          <NuxtLink to="/guide">◇ 二开指南</NuxtLink>
+          <NuxtLink to="/demo">▶ 在线体验</NuxtLink>
+        </div>
       </div>
       <div data-hero class="hero-product panel" aria-label="生产指挥中心产品界面预览">
         <div class="product-topbar"><div><span class="product-logo">R</span><b>生产指挥中心</b></div><div class="product-meta"><span><i class="online" />系统正常</span><span>08月30日 · 周日</span></div></div>
