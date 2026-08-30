@@ -37,9 +37,9 @@ onMounted(() => {
     <!-- VitePress Standard Top Navigation Bar -->
     <header class="vp-nav">
       <div class="vp-container vp-nav-inner">
-        <!-- Brand Title -->
+        <!-- Brand Title with Official Logo -->
         <NuxtLink to="/" class="vp-nav-brand">
-          <span class="vp-nav-brand-logo">R</span>
+          <img src="/logo.png" alt="睿易 MDP" class="w-7 h-7 object-contain rounded-md flex-shrink-0" />
           <span>睿易 MDP 文档</span>
         </NuxtLink>
 

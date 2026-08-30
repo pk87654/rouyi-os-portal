@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         { property: 'og:description', content: '面向真实制造现场的一体化数字化平台' },
         { property: 'og:type', content: 'website' }
       ],
-      link: [{ rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]
+      link: [{ rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }]
     }
   },
   nitro: {
