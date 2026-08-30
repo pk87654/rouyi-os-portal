@@ -468,17 +468,23 @@ const capabilities = [
 
           <div class="vp-contact-qr-group">
             <div class="vp-qr-item">
-              <div class="vp-qr-box">
-                <div class="font-bold text-xs">睿易制造</div>
-                <div class="text-[9px] text-gray-500 mt-1">微信扫码咨询</div>
+              <div class="vp-qr-box overflow-hidden p-1 bg-white">
+                <img
+                  src="/images/wechat-qr.png"
+                  alt="微信扫码咨询"
+                  class="w-full h-full object-contain rounded"
+                />
               </div>
               <strong>微信咨询</strong>
               <span>添加技术微信获取支持</span>
             </div>
             <div class="vp-qr-item">
-              <div class="vp-qr-box">
-                <div class="font-bold text-xs">交流群</div>
-                <div class="text-[9px] text-gray-500 mt-1">工厂 IT 交流</div>
+              <div class="vp-qr-box overflow-hidden p-1 bg-white">
+                <img
+                  src="/images/wechat-qr.png"
+                  alt="微信交流群"
+                  class="w-full h-full object-contain rounded"
+                />
               </div>
               <strong>微信交流群</strong>
               <span>扫码入群与同行交流</span>

@@ -48,11 +48,12 @@ const copyWechat = () => {
       </div>
 
       <div class="vp-contact-float-body">
-        <div class="vp-contact-float-qr">
-          <div class="w-full h-full border border-dashed border-gray-300 rounded flex flex-col items-center justify-center text-gray-700">
-            <div class="font-bold text-xs text-gray-900">睿易制造</div>
-            <div class="text-[9px] text-gray-500 mt-0.5">微信扫码咨询</div>
-          </div>
+        <div class="vp-contact-float-qr overflow-hidden p-1 bg-white">
+          <img
+            src="/images/wechat-qr.png"
+            alt="微信扫码咨询"
+            class="w-full h-full object-contain rounded"
+          />
         </div>
 
         <div class="w-full">
