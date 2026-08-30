@@ -93,6 +93,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -101,6 +103,8 @@ body {
   min-height: 100vh;
   font-size: 15px;
   line-height: 1.7;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 a {
@@ -121,13 +125,21 @@ button {
 
 code, pre {
   font-family: var(--vp-font-family-mono);
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 /* Container Width (1152px VitePress Standard) */
 .vp-container, .section-shell {
   max-width: 1152px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .vp-container, .section-shell {
+    padding: 0 24px;
+  }
 }
 
 @media (min-width: 960px) {
@@ -741,14 +753,26 @@ html.dark .vp-nav {
 /* ==========================================================================
    Home Section: 联系我们与社区 (contact-panel)
    ========================================================================== */
+/* ==========================================================================
+   Home Section: 联系我们与社区 (contact-panel)
+   ========================================================================== */
 .vp-contact-panel {
   display: grid;
   grid-template-columns: 1fr;
   background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-border);
   border-radius: 16px;
-  padding: 34px;
-  gap: 34px;
+  padding: 20px 16px;
+  gap: 24px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .vp-contact-panel {
+    padding: 30px 24px;
+    gap: 32px;
+  }
 }
 
 @media (min-width: 860px) {
@@ -760,17 +784,26 @@ html.dark .vp-nav {
 }
 
 .vp-contact-main h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--vp-c-text-1);
   margin-bottom: 12px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .vp-contact-main h3 {
+    font-size: 22px;
+  }
 }
 
 .vp-contact-main p {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--vp-c-text-2);
   line-height: 1.7;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
 .vp-contact-tags {
@@ -781,45 +814,60 @@ html.dark .vp-nav {
 }
 
 .vp-contact-tag {
-  font-size: 13px;
-  padding: 5px 12px;
+  font-size: 12px;
+  padding: 4px 10px;
   border-radius: 6px;
   background-color: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .vp-contact-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 18px;
 }
 
 .vp-contact-meta {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--vp-c-text-3);
+  word-break: break-all;
+  line-height: 1.6;
 }
 
 .vp-contact-qr-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 12px;
   text-align: center;
+  max-width: 100%;
+}
+
+@media (max-width: 420px) {
+  .vp-contact-qr-group {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 .vp-qr-item {
   background-color: var(--vp-c-bg-elv);
   border: 1px solid var(--vp-c-border);
   border-radius: 12px;
-  padding: 18px;
+  padding: 14px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .vp-qr-box {
   width: 110px;
   height: 110px;
+  max-width: 100%;
   background-color: var(--vp-c-bg-soft);
   border: 1px dashed var(--vp-c-border);
   border-radius: 8px;
@@ -827,21 +875,22 @@ html.dark .vp-nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: var(--vp-c-text-1);
 }
 
 .vp-qr-item strong {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--vp-c-text-1);
   margin-bottom: 4px;
 }
 
 .vp-qr-item span {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--vp-c-text-3);
+  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -852,6 +901,22 @@ html.dark .vp-nav {
   bottom: 24px;
   right: 24px;
   z-index: 99;
+}
+
+@media (max-width: 640px) {
+  .vp-contact-float {
+    bottom: 14px;
+    right: 14px;
+  }
+  .vp-contact-float-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  .vp-contact-float-card {
+    width: calc(100vw - 28px);
+    max-width: 300px;
+    padding: 14px;
+  }
 }
 
 .vp-contact-float-btn {
