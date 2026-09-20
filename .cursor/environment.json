@@ -1,0 +1,17 @@
+{
+  "name": "rouyi-os-portal",
+  "install": "pnpm install --frozen-lockfile",
+  "terminals": [
+    {
+      "name": "nuxt-dev",
+      "command": "NUXT_TELEMETRY_DISABLED=1 pnpm dev",
+      "description": "Nuxt 3 development server on port 3000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Nuxt dev server",
+      "port": 3000
+    }
+  ]
+}
